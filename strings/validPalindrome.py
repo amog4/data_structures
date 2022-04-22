@@ -1,7 +1,5 @@
 s = "Race Car"
 
-from turtle import st
-
 
 class Solution:
     
