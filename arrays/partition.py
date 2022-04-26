@@ -24,5 +24,12 @@ s = "ababcbacadefegdehijhklij"
 
 c = Solution()
 c.partitionLabels(s = s)
-            
+
+s = ["h","e","l","l","o"]
+start = 0
+for i in range(len(s) - 1,1,-1):
+    s[start],s[i] = s[i],s[start]
+    start += 1
+    print(s)
+           
             

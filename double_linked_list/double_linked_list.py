@@ -110,7 +110,33 @@ def DoubleLikedList():
             return True
         return False
 
-    def insert(self,index,value):
+    def remove(self,index,value):
+
+        temp =  self.get(index)
+
+        temp.next.prev = temp.prev
+        temp.next.next = temp.next
+        temp.prev = None
+        temp.next = None
+
+        self.length -= 1
+        return temp
+
+    
+    def inset(self,index,value):
+
+        new_node = Node(value)
+        before = self.get(index - 1)
+        after = before.next
+
+        new_node.prev = before
+        new_node.after = after
+        before.next = new_node
+        after.prev = new_node
+
+        self.length += 1
+        return True
+
 
         
 
